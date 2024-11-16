@@ -4,6 +4,7 @@ use tracing::{error, info};
 
 mod client;
 mod utils;
+mod plugins;
 
 fn main() -> ExitCode {
     #[cfg(feature = "dotenv")]

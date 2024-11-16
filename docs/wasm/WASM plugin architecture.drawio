@@ -1,0 +1,111 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Overview" id="FYyh1aOesfQggzh5EUfr">
+    <mxGraphModel dx="2074" dy="1197" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-5" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Discord bot startup sequence&lt;/h1&gt;&lt;p&gt;For convience, anything else under the discord bot has been abstracted for this diagram. The whole system is scoped under the same program.&lt;br&gt;Any loops have been omitted (simplified, with the mention of a multiple i.e. plugin&lt;b&gt;s&lt;/b&gt;, it is regarded as a loop until every plugin has been iterated through)&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="440" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cXPa7K7uo29oBiNJmHvz-7" target="cXPa7K7uo29oBiNJmHvz-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="60" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cXPa7K7uo29oBiNJmHvz-8" target="cXPa7K7uo29oBiNJmHvz-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-8" value="Retrieve Bot Config Metadata from config.yaml" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cXPa7K7uo29oBiNJmHvz-10" target="cXPa7K7uo29oBiNJmHvz-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-10" value="Parse Config Metadata" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cXPa7K7uo29oBiNJmHvz-13" target="cXPa7K7uo29oBiNJmHvz-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="660" y="280" />
+              <mxPoint x="660" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-20" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cXPa7K7uo29oBiNJmHvz-16">
+          <mxGeometry x="-0.2" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cXPa7K7uo29oBiNJmHvz-13" target="cXPa7K7uo29oBiNJmHvz-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-21" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cXPa7K7uo29oBiNJmHvz-19">
+          <mxGeometry x="-0.2571" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-13" value="Valid?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-17" value="Abort" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="700" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cXPa7K7uo29oBiNJmHvz-22" target="cXPa7K7uo29oBiNJmHvz-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-22" value="Retrieve Pugins metadata from plugins/&amp;lt;plugin folder&amp;gt;/plugin.yaml" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-23" value="Valid?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="520" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" target="cXPa7K7uo29oBiNJmHvz-27" parent="1" source="cXPa7K7uo29oBiNJmHvz-23">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="560" as="targetPoint" />
+            <mxPoint x="640" y="560" as="sourcePoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-26" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cXPa7K7uo29oBiNJmHvz-25">
+          <mxGeometry x="-0.2" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-27" value="Abort" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="700" y="520" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cXPa7K7uo29oBiNJmHvz-23" target="cXPa7K7uo29oBiNJmHvz-30">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="599.83" y="600" as="sourcePoint" />
+            <mxPoint x="599.83" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-29" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="cXPa7K7uo29oBiNJmHvz-28">
+          <mxGeometry x="-0.2571" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cXPa7K7uo29oBiNJmHvz-30" target="cXPa7K7uo29oBiNJmHvz-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-30" value="Parse plugins metadata" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="670" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cXPa7K7uo29oBiNJmHvz-31" target="cXPa7K7uo29oBiNJmHvz-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-31" value="Assign discord commands to wasm function" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="800" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cXPa7K7uo29oBiNJmHvz-33" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="560" y="930" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

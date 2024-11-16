@@ -12,5 +12,8 @@ tokio = { version = "1.40.0", features = ["full"] }
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 tracing-appender = "0.2"
+wasmer = { version = "5.0.1" }
+serde = "1.0.215"
+serde_yml = "0.0.12"
 
 dotenvy = { version = "0.15", optional = true }
